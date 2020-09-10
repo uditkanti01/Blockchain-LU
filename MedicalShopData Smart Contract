@@ -1,0 +1,25 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract medicineshoprecord{
+    string customerName;
+    string customerid;
+    string medicinename;
+    int customerage;
+    string price;
+    string date;
+    
+  
+    function medicineshoprecord(string newcustomerName,string newcustomerid,string newmedicinename, int newcustomerage, 
+    string newprice,string newdate) public {
+        
+        customerName = newcustomerName;
+        customerid =newcustomerid; 
+        medicinename = newmedicinename;
+        customerage =newcustomerage ;
+        price= newprice;
+        date= newdate;
+    }
+    function getmedicineshoprecord() public view returns(string,string,string,int, string,string) {
+        return( customerName,customerid,medicinename,customerage,price,date);
+    }
+    
+}
