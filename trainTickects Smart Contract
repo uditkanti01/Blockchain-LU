@@ -1,0 +1,25 @@
+ pragma solidity 0.4.18 <= 0.6.12;
+contract Traintickets{
+    string customerName;
+    string arrivingplace;
+    string destinationplace;
+    string trainno;
+    string date;
+    string trainname;
+    string ticketprice;
+    function Traintickets(string newCustomerName,string newArrivingPlace,string newDestinationPlace, string newTrainNo, 
+    string newDate,string newTrainName, string newTicketPrice  ) public {
+        
+        customerName = newCustomerName;
+        arrivingplace =newArrivingPlace; 
+        destinationplace = newDestinationPlace;
+        trainno =newTrainNo ;
+        date=newDate ;
+        trainname= newTrainName;
+        ticketprice= newTicketPrice;
+    }
+    function getTraintickets() public view returns(string,string,string,string, string,string,string) {
+        return(customerName,arrivingplace,destinationplace,trainno,date,trainname,ticketprice);
+    }
+    
+}
